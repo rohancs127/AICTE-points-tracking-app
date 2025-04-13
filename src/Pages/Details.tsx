@@ -67,7 +67,7 @@ const Details = () => {
         >
           <option value="">Select Role</option>
           <option value="student">Student</option>
-          <option value="coordinator">Coordinator</option>
+          {/* <option value="coordinator">Coordinator</option> */}
         </select>
 
         <input

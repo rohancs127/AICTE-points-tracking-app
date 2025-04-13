@@ -50,8 +50,8 @@ const CoordinatorView = () => {
       
     };
 
-    fetchStudents();
     fetchUser();
+    fetchStudents();
   }, []);
 
   // Handler to select a student and show their activities
@@ -71,7 +71,7 @@ const CoordinatorView = () => {
       {error && <p className="text-red-500">{error}</p>}
 
       {/* Display student profile if userDetails are available */}
-      {userDetails && (
+      {userDetails.length > 0 ? (
         <div className="bg-gray-100 p-4 rounded shadow-md mb-4">
           <h3 className="font-semibold text-lg">Profile</h3>
           <p>
@@ -81,8 +81,11 @@ const CoordinatorView = () => {
             <strong>Email:</strong> {userDetails[0].email}
           </p>
         </div>
+      ) : (
+        <p>Loading profile...</p> // Display loading text if userDetails is empty
       )}
-      <h2 className="text-xl font-semibold mb-4">Coordinator View</h2>
+
+      {/* <h2 className="text-xl font-semibold mb-4">Coordinator View</h2> */}
 
       {error && <p className="text-red-500">{error}</p>}
 
