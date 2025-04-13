@@ -2,7 +2,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { signOut } from "../Services/authService"; // Import the signOut function
 import CoordinatorView from "../Components/CoordinatorView";
 import StudentView from "../Components/StudentView";
-import { deleteUser } from "../Services/deleteUser";
+// import { deleteUser } from "../Services/deleteUser";
 
 const Dashboard = () => {
   const location = useLocation();
